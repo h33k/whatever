@@ -1,11 +1,9 @@
 name: Run Superpages action
 
 on:
+  schedule:
+    - cron: '*/5 * * * *'
   workflow_dispatch:
-    inputs:
-      api_key:
-        description: 'API Key'
-        required: true
 
 jobs:
   run-script:
@@ -28,9 +26,9 @@ jobs:
           pwd
           ls -l docs/_posts
 
-      - name: Run app/__main__.py with API_KEY
+      - name: Run app/__main__.py with API_KEY from secrets
         env:
-          API_KEY: ${{ inputs.api_key }}
+          API_KEY: ${{ secrets.API_KEY }}
         run: |
           python app/__main__.py
 
