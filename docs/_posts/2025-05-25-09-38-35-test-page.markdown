@@ -1,0 +1,12 @@
+---
+layout: post
+title: Test page
+date: 2025-05-25 09:38:35
+comments: true
+published: true
+categories: ["post"]
+tags: ["superpage"]
+author: me
+modified_when: 2025-05-25T09:38:35.459465
+---
+This is a test page
