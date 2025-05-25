@@ -1,4 +1,4 @@
-name: Run app/__main__.py
+name: Run Superpages action
 
 on:
   workflow_dispatch:
@@ -40,7 +40,7 @@ jobs:
           git config user.name "GitHub Actions"
           git add docs/_posts
           if ! git diff --cached --quiet; then
-            git commit -m "Update posts in docs/_posts by GitHub Action"
+            git commit -m "Update posts in Superpages"
             git push
           else
             echo "No changes to commit"
