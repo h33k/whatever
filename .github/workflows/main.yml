@@ -23,6 +23,11 @@ jobs:
       - name: Install dependencies
         run: pip install -r app/requirements.txt
 
+      - name: Show current working directory and list docs/_posts
+        run: |
+          pwd
+          ls -l docs/_posts
+
       - name: Run app/__main__.py with API_KEY
         env:
           API_KEY: ${{ inputs.api_key }}

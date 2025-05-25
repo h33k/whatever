@@ -7,7 +7,7 @@ def format_filename(date, title):
 
 
 def write_frontmatter(args):
-    f = open(f"../docs/_posts/{format_filename(args['date'], args['title'])}", "w")
+    f = open(f"docs/_posts/{format_filename(args['date'], args['title'])}", "w")
     f.write("---\n")
     f.write("layout: post\n")
     f.write(f"title: {args['title']}\n")
@@ -23,7 +23,7 @@ def write_frontmatter(args):
 
 
 def write_body(args, body):
-    f = open(f"../docs/_posts/{format_filename(args['date'], args['title'])}", "a+")
+    f = open(f"docs/_posts/{format_filename(args['date'], args['title'])}", "a+")
     f.write(body)
     f.close()
 

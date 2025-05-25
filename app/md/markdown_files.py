@@ -4,7 +4,7 @@ from datetime import datetime
 import yaml
 
 def get_current_mds():
-    posts_dir = "../docs/_posts"
+    posts_dir = "docs/_posts"
     if not os.path.isdir(posts_dir):
         return []
 
@@ -26,7 +26,7 @@ def get_md(full_filename, posts_dir="_posts"):
     return None
 
 
-def is_modified(date_prefix, modified_when, posts_dir="../docs/_posts"):
+def is_modified(date_prefix, modified_when, posts_dir="docs/_posts"):
     import os, re, yaml
     from datetime import datetime
 
@@ -69,7 +69,7 @@ def is_modified(date_prefix, modified_when, posts_dir="../docs/_posts"):
     return norm(val.strip()) != norm(mod.strip())
 
 
-def delete_md_with_date_prefix(date_prefix, posts_dir="../docs/_posts"):
+def delete_md_with_date_prefix(date_prefix, posts_dir="docs/_posts"):
     for filename in os.listdir(posts_dir):
         if filename.startswith(date_prefix) and filename.endswith((".md", ".markdown")):
             filepath = os.path.join(posts_dir, filename)
