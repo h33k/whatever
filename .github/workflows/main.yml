@@ -33,3 +33,15 @@ jobs:
           API_KEY: ${{ inputs.api_key }}
         run: |
           python app/__main__.py
+
+      - name: Commit and push changes in docs/_posts if any
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          git add docs/_posts
+          if ! git diff --cached --quiet; then
+            git commit -m "Update posts in docs/_posts by GitHub Action"
+            git push
+          else
+            echo "No changes to commit"
+          fi
