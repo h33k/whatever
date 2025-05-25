@@ -7,6 +7,7 @@ if __name__ == '__main__':
     cards = json.loads(cards)
 
     for card_id, card in cards.items():
+        print(card_id)
         markup = card['data']['markup']
         title = card['data']['name']
         created_when, *_ = card['data']['created_when'].replace('T', '-').replace(':', '-').partition('.')
