@@ -1,4 +1,3 @@
-import supernotes as sn
 import md
 import json
 import os
