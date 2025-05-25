@@ -2,13 +2,14 @@ title: Whatever
 email: superpages@nowhere.local
 description: >-
   Superpages is a static site generator that allows you to create posts directly from Supernotes app. 
-baseurl: "/whatever"
+baseurl: "/{{ site.github.repository_name }}"
 url:
 
 remote_theme: h33k/jekyll-theme-superpages
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
+  - jekyll-github-metadata
 
 sass:
   load_paths:
