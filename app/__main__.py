@@ -1,9 +1,10 @@
+import supernotes as sn
 import md
 import json
 import os
 
 if __name__ == '__main__':
-    cards = card_id = os.environ.get('API_KEY')
+    cards = sn.cards.getCards(os.environ.get('API_KEY'))
     cards = json.loads(cards)
 
     for card_id, card in cards.items():

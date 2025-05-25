@@ -1,1 +1,1 @@
-import app.supernotes.cards
+from . import cards
